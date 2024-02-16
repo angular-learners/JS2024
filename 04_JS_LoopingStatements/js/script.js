@@ -26,7 +26,7 @@ var y = 1;// starting point
 var limit2 = 20; // ending point
 while (y <= limit2) {//condition
     if (y % 2 == 0) {//checks wheather remainder is 0 or not
-        console.log(y);// statement1  "prints the numbers"
+        //console.log(y);// statement1  "prints the numbers"
     }
     y++;//statement2              "incriments the x value"
 }
@@ -57,7 +57,27 @@ while (y <= limit2) {//condition
 // 14
 // Super Star
 
+/**
+ * 
+ *  print  multiple of 3  star
+ *  print  mutiple  of 5  Good  star
+ *  print multiple of 3 & 5 super star
+ */
 
+
+for (let i = 1; i <= 50; i++) {
+    if (i >= 1) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("Super Star")
+        } else if (i % 3 == 0) {
+            console.log("Star")
+        } else if (i % 5 == 0) {
+            console.log("Good Star")
+        } else {
+            console.log(i);
+        }
+    }
+}
 
 
 
