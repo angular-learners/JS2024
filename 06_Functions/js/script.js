@@ -82,10 +82,10 @@ function isPostiveOrNegativeNumber() {
  * 
  */
 
-function add(num1, num2) {
-    var sum = num1 + num2;
-    console.log(sum);
-}
+// function add(num1, num2) {
+//     var sum = num1 + num2;
+//     console.log(sum);
+// }
 // add(10, 20);
 
 
@@ -133,7 +133,7 @@ function createAccount(accountNumber, acccountHolderName) {
         console.log("Invalid Account Number");
     }
 }
-createAccount(1001000010, "Sai Kumar");
+//createAccount(1001000010, "Sai Kumar");
 
 function withDrawAmount(wAmount, intialBalance) {
     var myBalance = intialBalance - wAmount;
@@ -167,3 +167,53 @@ function depositAmount(amount, intialBalance) {
  */
 
 //(SBI,2024)
+
+
+
+function calculate() {
+    var operation = document.getElementById('calculate').value;
+    var num1 = Number(document.getElementById('num1').value);
+    var num2 = Number(document.getElementById('num2').value);
+    var RESULT_LABEL = "RESULT:";
+    console.log(operation);
+    switch (operation) {
+        case "add":
+            let sum = add(num1, num2);
+            document.getElementById('result').innerText = RESULT_LABEL + sum;
+            break;
+        case "sub":
+            let substract = sub(num1, num2);
+            document.getElementById('result').innerText = RESULT_LABEL + substract;
+            break;
+        case "mul":
+            let multiplication = mul(num1, num2);
+            document.getElementById('result').innerText = RESULT_LABEL + multiplication;
+            break;
+        case "div":
+            let division = div(num1, num2);
+            document.getElementById('result').innerText = RESULT_LABEL + division;
+            break;
+    }
+}
+
+function add(num1, num2) {
+    var sum = (num1 + num2);
+    return sum;
+    // console.log(sum);
+}
+function sub(num1, num2) {
+    var sub = (num1 - num2);
+    return sub;
+    // console.log(sub);
+}
+function mul(num1, num2) {
+    var mul = (num1 * num2);
+    // console.log(mul);
+    return mul;
+}
+
+function div(num1, num2) {
+    var div = (num1 / num2);
+    return div;
+    // console.log(div);
+}
